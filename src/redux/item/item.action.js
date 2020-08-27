@@ -6,7 +6,7 @@ export const toggleItemHidden = (item) => ({
 });
 
 export const addItemToShop = (item) => ({
-  type: ItemActionTypes.ADD_ITEM,
+  type: ItemActionTypes.ADD_ITEM_TO_SHOP,
   payload: item,
 });
 

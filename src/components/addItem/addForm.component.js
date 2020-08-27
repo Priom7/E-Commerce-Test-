@@ -19,7 +19,8 @@ class AddItemForm extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    console.log(addItemToShop(this.state));
+
+    this.props.addItemToShop(this.state);
   };
 
   handleChange = (event) => {
@@ -29,6 +30,7 @@ class AddItemForm extends React.Component {
 
   render() {
     const { id, name, imageUrl, price } = this.state;
+
     return (
       <div className='addItem'>
         <h2 className='addItem__Title'>
@@ -71,7 +73,10 @@ class AddItemForm extends React.Component {
             required
           ></FormInput>
 
-          <CustomButton type='submit'>
+          <CustomButton
+            type='submit'
+            onClick={() => addItemToShop(this.state)}
+          >
             Add Item
           </CustomButton>
         </form>
@@ -84,4 +89,7 @@ const mapDispatchToProps = (dispatch) => ({
   addItemToShop: (item) => dispatch(addItemToShop(item)),
 });
 
-export default connect(mapDispatchToProps)(AddItemForm);
+export default connect(
+  null,
+  mapDispatchToProps
+)(AddItemForm);

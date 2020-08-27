@@ -1,4 +1,4 @@
-export const updateShopItem = (
+export const updateShopItemUtils = (
   shopItems,
   shopItemToUpdate
 ) => {

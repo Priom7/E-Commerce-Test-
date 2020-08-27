@@ -6,8 +6,3 @@ export const selectShopItems = createSelector(
   [selectItem],
   (shop) => shop.shopItems
 );
-
-export const selectItemHidden = createSelector(
-  [selectItem],
-  (shop) => shop.hidden
-);

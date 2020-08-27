@@ -1,47 +1,22 @@
-### My Brand Super Shop
+### E-Commerce Website
 
-Same as Amazon, Alibaba etc others E-commerce platform. It's online super shop where users can order items, buy things online. Users can
-track their orders. Pay Online (Stripe Payment method). Sign Up, Login (Firebase Authentication).
+Made with React, Redux.
 
-### Tools
+### Features
 
-1. React Js
-2. Material UI Core
-3. Material UI Icons
-4. Flex Box
-5. Firebase
-6. Stripe
-7. Redux
-8. React Hooks
-9. Sass
-10. SCSS
+1. Authentication (with Email and Password + Google Authentication (Firebase))
+2. Authorization (For admin and users)
+3. Cart
+4. Check Out
+5. User can Add/ Remove items into Crate
+6. Admin can Add Items in Shop
+7. Admin can Delete Items in Shop
+8. Admin can Activate/Deactivate an Item
 
-### Project UI
+### How to Use
 
-## 1. Home Page
-
-<img align="left" alt="priom7" src="https://github.com/Priom7/My-Brand-/blob/master/UI%20Screen%20Shots/mybrand-1.jpg" />
-
-<br/>
-<br/>
-
-## 2. Brands, Footers Section
-
-<img align="left" alt="priom7" src="https://github.com/Priom7/My-Brand-/blob/master/UI%20Screen%20Shots/mybrand-2.jpg" />
-
-<br/>
-<br/>
-
-## 3. Shop Preview Section
-
-<img align="left" alt="priom7" src="https://github.com/Priom7/My-Brand-/blob/master/UI%20Screen%20Shots/mybrand-3.jpg" />
-
-<br/>
-<br/>
-
-## 3. Shop Preview, Footer Section
-
-<img align="left" alt="priom7" src="https://github.com/Priom7/My-Brand-/blob/master/UI%20Screen%20Shots/mybrand-4.jpg" />
-
-<br/>
-<br/>
+1. run - npm install
+2. cd to the directory
+3. npm start
+4. admin : email : admin@gmail.com pass: 123456
+5. user : email : t1@gmail.com pass : 123456

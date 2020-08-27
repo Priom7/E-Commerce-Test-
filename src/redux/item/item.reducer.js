@@ -1,5 +1,5 @@
 import ItemActionTypes from "./item.types";
-import { updateShopItem } from "./item.utils";
+import { updateShopItemUtils } from "./item.utils";
 
 const INITIAL_STATE = {
   shopItems: [
@@ -35,24 +35,22 @@ const itemReducer = (state = INITIAL_STATE, action) => {
     case ItemActionTypes.TOGGLE_ITEM_HIDDEN:
       return {
         ...state,
-        shopItems: updateShopItem(
+        shopItems: updateShopItemUtils(
           state.shopItems,
           action.payload
         ),
       };
-
-    case ItemActionTypes.ADD_ITEM:
-      return {
-        ...state,
-        shopItems: state.shopItems.push(action.payload),
-      };
-
     case ItemActionTypes.CLEAR_ITEM_FROM_SHOP:
       return {
         ...state,
         shopItems: state.shopItems.filter(
           (shopItem) => shopItem.id !== action.payload.id
         ),
+      };
+
+    case ItemActionTypes.ADD_ITEM_TO_SHOP:
+      return {
+        shopItems: [...state.shopItems, action.payload],
       };
 
     default:
