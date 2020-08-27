@@ -1,0 +1,33 @@
+.checkOutPage {
+  width: 55%;
+  min-height: 90vh;
+
+  padding: 20px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 100px auto 0;
+
+  .checkOutPage__header {
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid darkgrey;
+
+    .checkOutPage__headerBlocks {
+      text-transform: capitalize;
+      width: 23%;
+
+      &:last-child {
+        width: 8%;
+      }
+    }
+  }
+
+  .checkOutPage__total {
+    margin-top: 30px;
+    margin-left: auto;
+    font-size: 36px;
+  }
+}

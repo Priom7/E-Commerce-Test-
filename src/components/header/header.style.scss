@@ -1,0 +1,63 @@
+.header {
+  position: fixed;
+  top: 0;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #5e1224;
+  color: wheat;
+  z-index: 1;
+  transition-timing-function: ease-in;
+  transition: all 0.5s;
+
+  .header__search {
+    flex: 0.4;
+    background-color: #9c495d;
+    text-align: center;
+    display: flex;
+    padding: 0 50px;
+    color: wheat;
+    border: 1px wheat solid;
+    border-radius: 6px;
+
+    input {
+      background-color: transparent;
+      border: none;
+      color: wheat;
+      text-align: center;
+
+      padding: 5px;
+    }
+    ::placeholder {
+      color: wheat;
+    }
+  }
+
+  .header__logoContainer {
+    height: 100%;
+    width: 70%;
+    padding: 25px;
+  }
+
+  .header__logo {
+    display: flex;
+    color: wheat;
+    padding: 5px;
+  }
+
+  .header__options {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .header__option {
+      display: flex;
+      padding: 10px 15px;
+      cursor: pointer;
+      color: wheat;
+    }
+  }
+}

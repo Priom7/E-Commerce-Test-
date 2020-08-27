@@ -1,0 +1,10 @@
+.addItem {
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+  justify-content: center;
+
+  .addItem__Title {
+    margin-top: 100px;
+  }
+}
