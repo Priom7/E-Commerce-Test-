@@ -13,7 +13,7 @@ Made with React, Redux.
 7. Admin can Delete Items from Shop
 8. Admin can Activate/Deactivate an Item
 
-### How to Use
+### How to Use the repo
 
 1. run - npm install
 2. cd to the directory
