@@ -17,10 +17,14 @@ class AddItemForm extends React.Component {
     };
   }
 
-  handleSubmit = (event) => {
+  handleSubmit = async (event) => {
     event.preventDefault();
-
-    this.props.addItemToShop(this.state);
+    try {
+      await this.props.addItemToShop(this.state);
+      alert("New Item Added on Shop...!!");
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   handleChange = (event) => {
@@ -73,10 +77,7 @@ class AddItemForm extends React.Component {
             required
           ></FormInput>
 
-          <CustomButton
-            type='submit'
-            onClick={() => addItemToShop(this.state)}
-          >
+          <CustomButton type='submit'>
             Add Item
           </CustomButton>
         </form>

@@ -42,6 +42,14 @@ class SignIn extends React.Component {
         <span className='signIn__subTitle'>
           Sign in with your email and password
         </span>
+        <div>
+          Log in as Admin : (email: admin@gmail.com
+          password: 123456)
+        </div>
+        <div>
+          Log in as User : (email: test@gmail.com password:
+          123456)
+        </div>
 
         <form onSubmit={this.handleSubmit}>
           <FormInput

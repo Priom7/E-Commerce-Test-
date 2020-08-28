@@ -7,10 +7,10 @@
     font-size: 28px;
     margin-bottom: 25px;
   }
+}
 
-  .preview__collection {
-    display: flex;
-    justify-content: space-between;
-    overflow-x: scroll;
-  }
+.preview__collection {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
