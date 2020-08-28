@@ -8,7 +8,7 @@ Made with React, Redux.
 2. Authorization (For admin and users)
 3. Cart
 4. Check Out
-5. User can Add/ Remove items into/from Crate
+5. User can Add/ Remove items into/from Carte
 6. Admin can Add Items in Shop
 7. Admin can Delete Items from Shop
 8. Admin can Activate/Deactivate an Item
