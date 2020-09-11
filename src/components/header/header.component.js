@@ -21,6 +21,10 @@ const Header = ({ currentUser, hidden }) => {
         <div className='header__logo'>
           <BusinessIcon></BusinessIcon>{" "}
           <span>My Brand</span>
+          <img
+            src='https://hitcounter.pythonanywhere.com/count/tag.svg?url=https%3A%2F%2Fawesome-poincare-9606e1.netlify.app%2F'
+            alt='Hits'
+          ></img>
         </div>
       </Link>
       <div className='header__options'>
@@ -61,7 +65,7 @@ const Header = ({ currentUser, hidden }) => {
 // using createStructuredSelector() from 'reselect' library for reducing the number of re-rendering
 const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser,
-  hidden: selectCartHidden,
+  hidden: selectCartHidden
 });
 
 export default connect(mapStateToProps)(Header);
