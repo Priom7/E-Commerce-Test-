@@ -4,7 +4,7 @@ import { updateShopItemUtils } from "./item.utils";
 const INITIAL_STATE = {
   shopItems: [
     {
-      id: 2,
+      id: 293825464564,
       name: "Food Item 1",
       imageUrl:
         "https://cdn.pixabay.com/photo/2017/04/23/09/44/smoothies-2253423_1280.jpg",
@@ -12,7 +12,7 @@ const INITIAL_STATE = {
       isAvailable: true,
     },
     {
-      id: 3,
+      id: 3667788586785,
       name: "Food Item 2",
       imageUrl:
         "https://cdn.pixabay.com/photo/2010/12/13/10/05/background-2277_1280.jpg",
@@ -20,7 +20,7 @@ const INITIAL_STATE = {
       isAvailable: false,
     },
     {
-      id: 4,
+      id: 48789768678678,
       name: "Food Item 3",
       imageUrl:
         "https://cdn.pixabay.com/photo/2010/12/13/10/05/background-2277_1280.jpg",

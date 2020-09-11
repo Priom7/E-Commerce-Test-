@@ -5,15 +5,17 @@ import { connect } from "react-redux";
 import Shop from "./page/shopPage/shop.component";
 import Header from "./components/header/header.component";
 import AuthPage from "./page/authPage/authPage";
+import Sidebar from "./components/sidebar/Sidebar";
 import { createStructuredSelector } from "reselect";
 import { selectCurrentUser } from "./redux/user/user.selector";
 import { setCurrentUser } from "./redux/user/user.action";
 import {
   auth,
-  createUserProfileDocument,
+  createUserProfileDocument
 } from "./firebase/firebase";
 import CheckOutPage from "./page/checkoutPage/checkOutPage.component";
 import AddItemPage from "./page/addItemPage/addItem.component";
+import Dashboard from "./page/dashboard/Dashboard";
 
 class App extends React.Component {
   unsubscribeFromAuth = null;
@@ -21,15 +23,15 @@ class App extends React.Component {
   componentDidMount() {
     const { setCurrentUser } = this.props;
     this.unsubscribeFromAuth = auth.onAuthStateChanged(
-      async (userAuth) => {
+      async userAuth => {
         if (userAuth) {
           const userRef = await createUserProfileDocument(
             userAuth
           );
-          userRef.onSnapshot((snapShot) => {
+          userRef.onSnapshot(snapShot => {
             setCurrentUser({
               id: snapShot.id,
-              ...snapShot.data(),
+              ...snapShot.data()
             });
           });
         } else {
@@ -42,13 +44,17 @@ class App extends React.Component {
   componentWillUnmount() {
     this.unsubscribeFromAuth();
   }
-
   render() {
     return (
-      <div>
-        <Header></Header>
-
-        <div className='app'>
+      <div className='app'>
+        <div className='app__headers'>
+          {this.props.currentUser?.isAdmin ? (
+            <Sidebar className='app__sidebar'></Sidebar>
+          ) : (
+            <Header className='app__header'></Header>
+          )}
+        </div>
+        <div className='app__pages'>
           <Switch>
             <Route exact path='/' component={Shop}></Route>
 
@@ -56,6 +62,11 @@ class App extends React.Component {
               exact
               path='/add'
               component={AddItemPage}
+            ></Route>
+            <Route
+              exact
+              path='/dashboard'
+              component={Dashboard}
             ></Route>
             <Route
               exact
@@ -81,11 +92,11 @@ class App extends React.Component {
 }
 
 const mapStateToProps = createStructuredSelector({
-  currentUser: selectCurrentUser,
+  currentUser: selectCurrentUser
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  setCurrentUser: (user) => dispatch(setCurrentUser(user)),
+const mapDispatchToProps = dispatch => ({
+  setCurrentUser: user => dispatch(setCurrentUser(user))
 });
 
 export default connect(

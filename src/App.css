@@ -32,3 +32,16 @@ a {
 ::-webkit-scrollbar-thumb:hover {
   background: #88505d;
 }
+
+.app {
+  display: flex;
+}
+
+.app__sidebar {
+  max-width: 20%;
+}
+
+.app__pages {
+  margin-left: 20%;
+  width: 80%;
+}
