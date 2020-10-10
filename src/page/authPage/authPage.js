@@ -5,8 +5,12 @@ import SignUp from "../../components/signUp/signUp.component";
 function AuthPage() {
   return (
     <div className='authPage'>
-      <SignIn></SignIn>
-      <SignUp></SignUp>
+      <div className='signIn'>
+        <SignIn></SignIn>
+      </div>
+      <div className='signUp'>
+        <SignUp></SignUp>
+      </div>
     </div>
   );
 }

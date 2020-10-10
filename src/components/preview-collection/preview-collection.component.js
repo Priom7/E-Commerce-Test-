@@ -12,7 +12,7 @@ const PreviewCollection = ({ title, items }) => {
         for you{" "}
       </h4>
       <div className='preview__collection'>
-        {items.map((item) => (
+        {items.map(item => (
           <CollectionItem
             key={item.id}
             item={item}

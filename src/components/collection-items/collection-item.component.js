@@ -4,7 +4,7 @@ import { createStructuredSelector } from "reselect";
 import { addItemToCart } from "../../redux/cart/cart.action";
 import {
   clearItemFromShop,
-  toggleItemHidden,
+  toggleItemHidden
 } from "../../redux/item/item.action";
 import { selectCurrentUser } from "../../redux/user/user.selector";
 import "./collection-item.style.scss";
@@ -15,7 +15,7 @@ const CollectionItem = ({
   addItemToCart,
   currentUser,
   clearItemFromShop,
-  toggleItemHidden,
+  toggleItemHidden
 }) => {
   const { name, price, imageUrl, isAvailable } = item;
   return (
@@ -23,7 +23,7 @@ const CollectionItem = ({
       <div
         className='collection__image'
         style={{
-          backgroundImage: `url(${imageUrl})`,
+          backgroundImage: `url(${imageUrl})`
         }}
       ></div>
       <div className='collection__footer'>
@@ -66,17 +66,16 @@ const CollectionItem = ({
   );
 };
 
-const mapDispatchToProps = (dispatch) => ({
-  addItemToCart: (item) => dispatch(addItemToCart(item)),
-  clearItemFromShop: (item) =>
+const mapDispatchToProps = dispatch => ({
+  addItemToCart: item => dispatch(addItemToCart(item)),
+  clearItemFromShop: item =>
     dispatch(clearItemFromShop(item)),
-  toggleItemHidden: (item) =>
-    dispatch(toggleItemHidden(item)),
+  toggleItemHidden: item => dispatch(toggleItemHidden(item))
 });
 
 // using createStructuredSelector() from 'reselect' library for reducing the number of re-rendering
 const mapStateToProps = createStructuredSelector({
-  currentUser: selectCurrentUser,
+  currentUser: selectCurrentUser
 });
 
 export default connect(

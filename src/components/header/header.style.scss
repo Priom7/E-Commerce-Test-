@@ -29,6 +29,7 @@
 
       padding: 5px;
     }
+
     ::placeholder {
       color: wheat;
     }
@@ -47,6 +48,7 @@
   }
 
   .header__options {
+    margin-right: 20px;
     width: 50%;
     height: 100%;
     display: flex;
@@ -58,6 +60,7 @@
       padding: 10px 15px;
       cursor: pointer;
       color: wheat;
+
     }
   }
 }

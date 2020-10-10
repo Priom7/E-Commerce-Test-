@@ -13,11 +13,11 @@ class AddItemForm extends React.Component {
       name: "",
       imageUrl: "",
       price: "",
-      isAvailable: true,
+      isAvailable: true
     };
   }
 
-  handleSubmit = async (event) => {
+  handleSubmit = async event => {
     event.preventDefault();
     try {
       await this.props.addItemToShop(this.state);
@@ -27,7 +27,7 @@ class AddItemForm extends React.Component {
     }
   };
 
-  handleChange = (event) => {
+  handleChange = event => {
     const { name, value } = event.target;
     this.setState({ [name]: value });
   };
@@ -86,8 +86,8 @@ class AddItemForm extends React.Component {
   }
 }
 
-const mapDispatchToProps = (dispatch) => ({
-  addItemToShop: (item) => dispatch(addItemToShop(item)),
+const mapDispatchToProps = dispatch => ({
+  addItemToShop: item => dispatch(addItemToShop(item))
 });
 
 export default connect(
